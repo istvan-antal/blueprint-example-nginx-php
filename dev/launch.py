@@ -17,12 +17,4 @@ instance.clone_project('git@github.com:istvan-antal/blueprint-example-nginx-php.
 
 instance.use_nginx_config('nginx.conf')
 
-print "Instance ready, use the following command to SSH in:"
-print instance.get_ssh_command() + "\n"
-
 instance.install_my_key()
-
-#print "To install your public key run:"
-#print instance.get_ssh_command() + " \"echo '$(cat ~/.ssh/id_rsa.pub)' >> ~/.ssh/authorized_keys\"" + "\n"
-
-print "For mail sending please run: sudo apt-get install postfix"
